@@ -3,9 +3,14 @@ require 'pry'
 class Hash
   def keys_of(*arguments)
     
-    arguments.map { |key, value| if arguements.include?(value) ? key : nil}
+    #check if the arguement includes the value and return the value's key if it does.
+    #return nothing (nil) if it does not
+    #return an array
+    
+    arguments.map {|key, value| arguements.include?(value) ? key : nil}.compact
     
     
-    #return an array with every key from the hash whose value matches the value(s) given as an argument.
+    #return an array
+    #every key from the hash whose value matches the value(s) given as an argument.
   end
 end
