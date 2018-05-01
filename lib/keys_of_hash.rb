@@ -7,7 +7,7 @@ class Hash
     #return nothing (nil) if it does not
     #return an array
     
-    arguments.map {|key, value| arguements.include?(value) ? key : nil}.compact
+    map {|key, value| arguments.include?(value) ? key : nil}.compact!
     
     
     #return an array
