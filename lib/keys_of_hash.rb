@@ -2,15 +2,8 @@ require 'pry'
 
 class Hash
   def keys_of(*arguments)
-    
-    #check if the arguement includes the value and return the value's key if it does.
-    #return nothing (nil) if it does not
-    #return an array
-    
-    map {|key, value| arguments.include?(value) ? key : nil}.compact!
-    
-    
-    #return an array
-    #every key from the hash whose value matches the value(s) given as an argument.
+
+    self.map {|key, value| arguments.include?(value) ? key : nil}.compact!
+
   end
 end
